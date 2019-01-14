@@ -1,22 +1,36 @@
 // Navigation code here
 .full-scroll-container {
     .flexbox-col;
+    .gray-banner {
+        height: @scroll-hack + 32;
+        width: 100vw;
+        position: fixed;
+        background-color: @wild-sand;
+        opacity: 0.95;
+    }
+
     position: relative;
-    h1 {
-        font-size: 4rem;
-        padding: 13px;
+    .scroll-hack {
+        z-index: 1;
+        opacity: 1;
+        position: fixed;
+        h1 {
+            font-size: 4rem;
+            padding: 13px;
+        }
     }
 
     nav {
         position: sticky;
-        top: @top;
-        opacity: 0.8;
-        .function;
+        top: @scroll-hack;
         .flexbox;
+        border-radius: 10px;
+        margin-top: @scroll-hack;
 
         a {
             text-decoration: none;
-            color: @header-font-color;
+            color: black;
+            font-weight: bold;
             font-size: 1.6rem;
             padding: 6px 16px;
 
@@ -24,14 +38,25 @@
                 color: white;
                 border-radius: 10px;
                 background-color: @ebony-clay;
-                transition: color 0.8s ease-in;
-                transition: background-color 0.3s ease-out;
+                transition: background-color 0.4s 0.1s ease-out;
             }
+
+            &:active {
+                color: @ebony-clay;
+                background-color: white;
+                transition: none;
+            }
+
+            
         }
     }
 
-    img {
-        margin: 35px auto 0px auto;
+    .img-main {
+        margin: 5px auto 0px auto;
+        position: sticky;
+        top: 0 - 180;;
+        z-index: 0;
+        border-radius: 5px;
 
         @media @mobile {
             width: 500px;
