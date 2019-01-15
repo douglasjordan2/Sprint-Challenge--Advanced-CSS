@@ -26,9 +26,10 @@
     background-color: @bgcolor;
 }
 
-.function() when (@top = true) {
-    .full-scroll-container nav a {
-        background-color: black;
+.hover {
+    &:hover {
         color: white;
+        background-color: @ebony-clay;
+        transition: background-color 0.4s 0.1s ease-out;
     }
 }
