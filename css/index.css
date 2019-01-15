@@ -16,6 +16,11 @@
   justify-content: space-between;
   align-items: center;
 }
+.hover:hover {
+  color: white;
+  background-color: #23293B;
+  transition: background-color 0.4s 0.1s ease-out;
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -217,10 +222,10 @@ p {
   font-weight: bold;
   font-size: 1.6rem;
   padding: 6px 16px;
+  border-radius: 10px;
 }
 .full-scroll-container nav a:hover {
   color: white;
-  border-radius: 10px;
   background-color: #23293B;
   transition: background-color 0.4s 0.1s ease-out;
 }
@@ -351,9 +356,19 @@ footer {
   text-align: center;
 }
 .home .walk .walk-text .btn:hover {
+  color: white;
+  background-color: #23293B;
+  transition: background-color 0.4s 0.1s ease-out;
+}
+.home .walk .walk-text .btn:hover {
   color: #22283A;
   background-color: white;
   cursor: pointer;
+}
+.home .walk .walk-text .btn:active {
+  color: white;
+  background-color: #23293B;
+  transition: none;
 }
 @media (max-width: 500px) {
   .home .walk .walk-text .btn {
